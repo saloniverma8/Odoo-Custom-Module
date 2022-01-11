@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--list view student-->
+    <record id="school_student_view_list" model="ir.ui.view">
+        <field name="name">school.student.view.list</field>
+        <field name="model">school.student</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <tree string="student list">
+                <field name="name"/>
+                <field name="identity_number" widget="badge" optional="show"
+                       on_change="1" modifiers="{'readonly':true}"
+                       options="{'color_field': 'color'}"/>
+                <field name="email"/>
+                <field name="mobile"/>
+                <field name="course_id" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--kanban view student-->
+    <record id="school_student_view_kanban" model="ir.ui.view">
+        <field name="name">school.student.view.kanban</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <kanban class="o_res_partner_kanban" sample="1">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="identity_number"/>
+                <field name="email"/>
+                <field name="mobile"/>
+                <field name="image_128"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban">
+                            <!--<img class="o_kanban_image_inner_pic" t-att-alt="record.name.value" t-att-src="kanban_image('school.student', 'image_128', record.id.raw_value)"/>-->
+                            <div class="o_kanban_image_fill_left o_kanban_image_full"
+                                 t-attf-style="background-image: url(#{kanban_image('school.student', 'image_128', record.id.raw_value, placeholder)})"
+                                 role="img"/>
+
+                            <div class="oe_kanban_details d-flex flex-column">
+                                <strong class="o_kanban_record_title oe_partner_heading">
+                                    <field name="name"/>
+                                </strong>
+                                <strong class="o_kanban_record_title oe_partner_heading">
+                                    <field name="identity_number"/>
+                                </strong>
+                                <strong class="o_kanban_record_title oe_partner_heading">
+                                    <field name="email"/>
+                                </strong>
+                                <strong class="o_kanban_record_title oe_partner_heading">
+                                    <field name="mobile"/>
+                                </strong>
+                                <div class="o_row">
+                                    <span class="oe_kanban_partner_links"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Action of student schedule-->
+    <record id="action_student_schedule" model="ir.actions.act_window">
+        <field name="name">student_schedule</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.period</field>
+        <field name="view_mode">calendar</field>
+    </record>
+
+    <!--Form view student(custom)-->
+    <record id="school_student_view_form" model="ir.ui.view">
+        <field name="name">school.student.view.form</field>
+        <field name="model">school.student</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="action"
+                                name="%(action_student_schedule)d"
+                                icon="fa-calendar" string="Schedule"
+                                context="{'search_default_course_id': active_id}">
+                        </button>
+                    </div>
+
+                    <field name="image_1920" widget="image" class="oe_avatar"
+                           options="{&quot;preview_image&quot;: &quot;image_128&quot;}"/>
+                    <h2 class="font-weight-bold">
+                        Student details
+                    </h2>
+
+                    <group>
+                        <group>
+                            <field name="name" placeholder="Name"/>
+                            <field name="title"/>
+                            <field name="school_id"/>
+                        </group>
+
+                        <group>
+                            <field name="identity_number"/>
+                            <field name="date" string="Admission date"/>
+
+                        </group>
+                    </group>
+                    <field name="note" widget="text_emojis" nolabel="1"
+                           placeholder="Enter any extra information..." string="Note"/>
+
+                    <notebook colspan="4">
+                        <page string="Address Information"
+                              name="student_address_info">
+                            <!--<field name="image_1920" widget='image' class="oe_avatar" options='{"preview_image": "image_128"}'/>-->
+                            <group>
+                                <group>
+                                    <label for="street" string="Address"/>
+                                    <div class="o_address_format">
+                                        <field name="street"
+                                               placeholder="Street..."
+                                               class="o_address_street"/>
+                                        <field name="street2"
+                                               placeholder="Street 2..."
+                                               class="o_address_street"/>
+                                        <field name="city" placeholder="City"
+                                               class="o_address_city"/>
+                                        <field name="state_id"
+                                               class="o_address_state"
+                                               placeholder="State"
+                                               options="{&quot;no_open&quot;: True}"/>
+                                        <field name="zip" placeholder="ZIP"
+                                               class="o_address_zip"/>
+                                        <field name="country_id"
+                                               placeholder="Country"
+                                               class="o_address_country"
+                                               aria-labelledby='lblRange'
+                                               options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                                    </div>
+                                </group>
+                                <group>
+                                    <field name="phone"
+                                           string="Residence number"
+                                           class="o_force_ltr"/>
+                                    <field name="email" string="Private email"/>
+                                    <field name="mobile"
+                                           string="Private Number"
+                                           class="o_force_ltr"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Courses" name="student_course_info">
+                            <field name="course_id">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="teacher_id"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Signature">
+                            <field name="student_signature" widget="signature"/>
+                        </page>
+
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--Search View Student-->
+    <record id="school_student_search" model="ir.ui.view">
+        <field name="name">school.student.search</field>
+        <field name="model">school.student</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <search string="Search Student">
+                <field name="name"
+                       filter_domain="['|', ('name','ilike',self),('identity_number','ilike',self)]"/>
+                <field name="identity_number"
+                       filter_domain="['|',('name','ilike',self),('identity_number','ilike',self)]"/>
+                <separator/>
+                <filter string="With Sign" name="student_with_sign"
+                        domain="[('student_signature', '!=', False)]"/>
+                <filter string="Without Sign" name="student_without_sign"
+                        domain="[('student_signature', '=', False)]"/>
+                <separator/>
+                <separator/>
+                <filter string="With Course" name="student_with_course"
+                        domain="[('course_id', '!=', False   )]"/>
+                <filter string="Without Course" name="student_without_course"
+                        domain="[('course_id', '=', False)]"/>
+                <separator/>
+                <group>
+                    <filter name="country_id" string="Country"
+                            context="{'group_by' : 'country_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action of the student-->
+    <record id="action_student" model="ir.actions.act_window">
+        <field name="name">Student</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <!-- parent menu-->
+    <menuitem id="school_root"
+              name="School"
+              sequence="0"
+              web_icon="school,static/img/school_icon.png"/>
+
+    <!--submenu-->
+    <menuitem id="school_student"
+              name="Student"
+              parent="school_root"
+              action="action_student"/>
+
+</odoo>

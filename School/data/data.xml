@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record model="product.product" id="product_regularcourse">
+            <field name="name">Regular Course</field>
+            <field name="type">service</field>
+            <field name="purchase_ok" eval="False"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="list_price">500.0</field>
+            <field name="categ_id" ref="product.product_category_consumable"/>
+        </record>
+    </data>
+</odoo>

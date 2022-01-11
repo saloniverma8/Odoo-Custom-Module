@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <report
+            id="report_student"
+            string="Student Detail"
+            model="school.student"
+            report_type="qweb-pdf"
+            name="School.student_report"
+            file="School.student_report"/>
+
+    <report id="report_course"
+            string="Course Detail"
+            model="school.course"
+            report_type="qweb-pdf"
+            name="School.course_report"
+            file="School.course_report"/>
+
+    <report id="report_teacher"
+            string="Teacher Detail"
+            model="school.teacher"
+            report_type="qweb-pdf"
+            name="School.teacher_report"
+            file="School.teacher_report"/>
+
+</odoo>

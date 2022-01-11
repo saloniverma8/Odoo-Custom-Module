@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--list view teacher-->
+    <record id="school_teacher_view_list" model="ir.ui.view">
+        <field name="name">school.teacher.view.list</field>
+        <field name="model">school.teacher</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <tree string="teacher list">
+                <field name="name"/>
+                <field name="email"/>
+                <field name="mobile" class="o_force_ltr"/>
+                <field name="school_id"/>
+                <field name="course_ids" widget="many2many_tags"/>
+                <field name="period_ids"/>
+                <field name="language" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--kanban view teacher-->
+    <record id="school_teacher_view_kanban" model="ir.ui.view">
+        <field name="name">school.teacher.view.kanban</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <kanban class="o_res_partner_kanban" sample="1">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="mobile"/>
+                <field name="image_128"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban">
+                            <!--<img class="o_kanban_image_inner_pic" t-att-alt="record.name.value" t-att-src="kanban_image('school.student', 'image_128', record.id.raw_value)"/>-->
+                            <div class="o_kanban_image_fill_left o_kanban_image_full"
+                                 t-attf-style="background-image: url(#{kanban_image('school.teacher', 'image_128', record.id.raw_value, placeholder)})"
+                                 role="img"/>
+
+                            <div class="oe_kanban_details d-flex flex-column">
+                                <strong class="o_kanban_record_title oe_partner_heading">
+                                    <field name="name"/>
+                                </strong>
+                                <strong class="o_kanban_record_title oe_partner_heading">
+                                    <field name="email"/>
+                                </strong>
+                                <strong class="o_kanban_record_title oe_partner_heading">
+                                    <field name="mobile"/>
+                                </strong>
+                                <div class="o_row">
+                                    <span class="oe_kanban_partner_links"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!--Action of teacher_schedule search-->
+    <record id="action_teacher_schedule" model="ir.actions.act_window">
+        <field name="name">teacher_schedule</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.period</field>
+        <field name="view_mode">calendar</field>
+    </record>
+
+    <!--Form view teacher(custom)-->
+    <record id="school_teacher_view_form" model="ir.ui.view">
+        <field name="name">school.teacher.view.form</field>
+        <field name="model">school.teacher</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div name="button_box" class="oe_button_box">
+                        <button class="oe_stat_button" type="action"
+                                name="%(action_teacher_schedule)d"
+                                icon="fa-calendar" string="Schedule"
+                                context="{'search_default_course_id': course_ids}">
+                        </button>
+                    </div>
+                    <field name="image_1920" widget="image" class="oe_avatar"
+                           options="{&quot;preview_image&quot;: &quot;image_128&quot;}"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" default_focus="1"
+                                   placeholder="Name"/>
+                        </h1>
+                        <label for="title" class="oe_edit_only"/>
+                        <h3>
+                            <field name="title"/>
+                        </h3>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="language" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="school_id"/>
+                            <field name="date" string="Joining date"/>
+                        </group>
+                    </group>
+
+                    <notebook colspan="4">
+                        <page string="Address Information"
+                              name="teacher_address_info">
+                            <!--<field name="image_1920" widget='image' class="oe_avatar" options='{"preview_image": "image_128"}'/>-->
+                            <group>
+                                <group>
+                                    <label for="street" string="Address"/>
+                                    <div class="o_address_format">
+                                        <field name="street"
+                                               placeholder="Street..."
+                                               class="o_address_street"/>
+                                        <field name="street2"
+                                               placeholder="Street 2..."
+                                               class="o_address_street"/>
+                                        <field name="city" placeholder="City"
+                                               class="o_address_city"/>
+                                        <field name="state_id"
+                                               class="o_address_state"
+                                               placeholder="State"
+                                               options="{&quot;no_open&quot;: True}"/>
+                                        <field name="zip" placeholder="ZIP"
+                                               class="o_address_zip"/>
+                                        <field name="country_id"
+                                               placeholder="Country"
+                                               class="o_address_country"
+                                               options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                                    </div>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Contact Information"
+                              name="teacher_contact_info">
+                            <group>
+                                <label for="phone" string="Contacts"/>
+                                <group>
+                                    <field name="phone"
+                                           string="Residence number"/>
+                                    <field name="email" string="Private email"/>
+                                </group>
+                                <group>
+                                    <field name="mobile"
+                                           string="Private Number"/>
+                                </group>
+
+                            </group>
+                        </page>
+
+                        <page string="Courses Information"
+                              name="teacher_course_info">
+
+                            <group>
+                                <field name="course_ids" nolabel="1">
+                                    <tree>
+                                        <field name="course_language"/>
+                                        <field name="status"/>
+                                        <field name="start_date"/>
+                                        <field name="end_date"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+
+                        <page string="Signature">
+                            <field name="teacher_signature" widget="signature"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--Search View Teacher-->
+    <record id="school_teacher_search" model="ir.ui.view">
+        <field name="name">school.teacher.search</field>
+        <field name="model">school.teacher</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <search string="Search teacher">
+                <field name="name"
+                       filter_domain="['|', ('name','ilike',self),('language','ilike',self)]"/>
+                <field name="language"
+                       filter_domain="['|',('name','ilike',self),('language','ilike',self)]"/>
+                <separator/>
+                <filter string="With Course" name="teacher_with_course"
+                        domain="[('course_ids', '!=', False)]"/>
+                <filter string="Without Course" name="teacher_without_course"
+                        domain="[('course_ids', '=', False)]"/>
+                <separator/>
+                <group>
+                    <filter name="country_id" string="Country"
+                            context="{'group_by' : 'country_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- action of the teacher-->
+    <record id="action_teacher" model="ir.actions.act_window">
+        <field name="name">Teacher</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.teacher</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <!-- parent menu-->
+    <menuitem id="school_root"
+              name="School"
+              sequence="0"
+              web_icon="school,static/img/school_icon.png"/>
+
+    <menuitem id="school_teacher"
+              name="Teacher"
+              parent="school_root"
+              action="action_teacher"/>
+
+</odoo>

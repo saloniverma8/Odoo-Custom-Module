@@ -1,0 +1,25 @@
+{
+    'name': "School",
+    'version': '1.0',
+    'depends': ['base', 'sale'],
+    'Summary': 'This is School management module',
+    'author': "Bloopark",
+    'category': 'School',
+    'description': """ This module is for School Management System """,
+    # data files always loaded at installation
+    'data': [
+            'security/ir.model.access.csv',
+            'wizards/enroll_student_wizard_view.xml',
+            'views/school_view.xml',
+            'views/student_view.xml',
+            'views/teacher_view.xml',
+            'views/course_view.xml',
+            'views/period_view.xml',
+            'data/data.xml',
+            'reports/report.xml',
+            'reports/student_report.xml',
+            'reports/course_report.xml',
+            'reports/teacher_report.xml',
+            ],
+    'demo': ['demo/demo.xml'],
+}

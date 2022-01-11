@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--list view of periods-->
+    <record id="period_list_view" model="ir.ui.view">
+        <field name="name">period.list.view</field>
+        <field name="model">school.period</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <tree string="Periods list">
+                <field name="start_time"/>
+                <field name="duration"/>
+                <field name="location"/>
+                <field name="course_id" string="Course"/>
+                <field name="teacher_id" string="Held by"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--Calender view of periods-->
+    <record id="period_calendar_view" model="ir.ui.view">
+        <field name="name">period.calendar.view</field>
+        <field name="model">school.period</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <calendar string="period Calender" mode="month" quick_add="False"
+                      date_start="start_time" date_stop="end_time"
+                      color="course_id">
+                <field name="duration"/>
+                <field name="location"/>
+                <field name="course_id"/>
+            </calendar>
+        </field>
+    </record>
+
+    <!--action of the Period-->
+    <record id="action_period" model="ir.actions.act_window">
+        <field name="name">Period</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.period</field>
+        <field name="view_mode">calendar,tree,form</field>
+    </record>
+
+    <!--    <record id="school_period_action_view_calendar" model="ir.actions.act_window.view">-->
+    <!--            <field name="sequence" eval="1"/>-->
+    <!--            <field name="view_mode">calendar</field>-->
+    <!--            <field name="view_id" ref="period_calendar_view"/>-->
+    <!--            <field name="act_window_id" ref="action_period"/>-->
+    <!--    </record>-->
+
+    <!--parent menu-->
+    <menuitem id="school_root"
+              name="School"
+              sequence="0"
+              web_icon="school,static/img/school_icon.png"/>
+
+    <!--submenu-->
+    <menuitem id="school_period"
+              name="Schedule"
+              parent="school_root"
+              action="action_period"/>
+</odoo>

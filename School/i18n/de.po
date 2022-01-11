@@ -1,0 +1,832 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* School
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-22 11:44+0000\n"
+"PO-Revision-Date: 2021-02-22 11:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__active
+#: model:ir.model.fields,field_description:School.field_school_teacher__active
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__active_lang_count
+#: model:ir.model.fields,field_description:School.field_school_teacher__active_lang_count
+msgid "Active Lang Count"
+msgstr "Aktive Langzahl"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Address"
+msgstr "Adresse"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Address Information"
+msgstr "Adresse Informationen"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__type
+#: model:ir.model.fields,field_description:School.field_school_teacher__type
+msgid "Address Type"
+msgstr "Adresse Typ"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+msgid "Admission date"
+msgstr "Aufnahmedatum"
+
+#. module: School
+#: model:ir.model.fields,help:School.field_school_student__lang
+#: model:ir.model.fields,help:School.field_school_teacher__lang
+msgid ""
+"All the emails and documents sent to this contact will be translated in this"
+" language."
+msgstr "Alle E-Mails und Dokumente, die an diesen Kontakt gesendet werden, werden in diese Sprache übersetzt"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__bank_ids
+#: model:ir.model.fields,field_description:School.field_school_teacher__bank_ids
+msgid "Banks"
+msgstr "Banken"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__barcode
+#: model:ir.model.fields,field_description:School.field_school_teacher__barcode
+msgid "Barcode"
+msgstr "Barcode"
+
+#. module: School
+#: model:ir.model.fields,help:School.field_school_student__is_company
+#: model:ir.model.fields,help:School.field_school_teacher__is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "Prüfen Sie, ob es sich bei dem Kontakt um eine Firma handelt, ansonsten um eine Person"
+
+#. module: School
+#: model:ir.model.fields,help:School.field_school_student__employee
+#: model:ir.model.fields,help:School.field_school_teacher__employee
+msgid "Check this box if this contact is an Employee."
+msgstr "Markieren Sie dieses Feld, wenn dieser Kontakt ein Mitarbeiter ist."
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__city
+#: model:ir.model.fields,field_description:School.field_school_teacher__city
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "City"
+msgstr "Stadt"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_period__location
+msgid "Class-Room"
+msgstr "Klassenzimmer"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__color
+#: model:ir.model.fields,field_description:School.field_school_teacher__color
+msgid "Color Index"
+msgstr "Farbindex"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__commercial_partner_id
+#: model:ir.model.fields,field_description:School.field_school_teacher__commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Kommerzielle Einheit"
+
+#. module: School
+#: model:ir.model,name:School.model_res_company
+msgid "Companies"
+msgstr "Unternehmen"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__company_id
+#: model:ir.model.fields,field_description:School.field_school_student__company_id
+#: model:ir.model.fields,field_description:School.field_school_teacher__company_id
+msgid "Company"
+msgstr "Unternehmen"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__company_name
+#: model:ir.model.fields,field_description:School.field_school_teacher__company_name
+msgid "Company Name"
+msgstr "Name der Firma"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__commercial_company_name
+#: model:ir.model.fields,field_description:School.field_school_teacher__commercial_company_name
+msgid "Company Name Entity"
+msgstr "Name der Firma Entität"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__company_type
+#: model:ir.model.fields,field_description:School.field_school_teacher__company_type
+msgid "Company Type"
+msgstr "Firma Typ"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__contact_address
+#: model:ir.model.fields,field_description:School.field_school_teacher__contact_address
+msgid "Complete Address"
+msgstr "Vollständige Adresse"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__child_ids
+#: model:ir.model.fields,field_description:School.field_school_teacher__child_ids
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Contact Information"
+msgstr "Kontakt Informationen"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Contacts"
+msgstr "Kontakte"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Country"
+msgstr "Land"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__country_id
+#: model:ir.model.fields,field_description:School.field_school_teacher__country_id
+msgid "Country Name"
+msgstr "Land Name"
+
+#. module: School
+#: model:ir.actions.act_window,name:School.action_course
+#: model:ir.model,name:School.model_school_course
+#: model:ir.model.fields,field_description:School.field_school_period__course_id
+#: model:ir.ui.menu,name:School.school_course
+#: model_terms:ir.ui.view,arch_db:School.period_list_view
+msgid "Course"
+msgstr "Kurs"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__schedule
+msgid "Course Schedule"
+msgstr "Kurs Zeitplan"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__teacher_id
+msgid "Course Teacher"
+msgstr "Kursleiter"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__course_id
+msgid "Course-ID"
+msgstr "Kurs-ID"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_teacher__course_ids
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+msgid "Courses"
+msgstr "Kurse"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Courses Information"
+msgstr "Kurse Informationen"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.course_list_view
+msgid "Courses list"
+msgstr "Liste der Kurse"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__create_uid
+#: model:ir.model.fields,field_description:School.field_school_period__create_uid
+#: model:ir.model.fields,field_description:School.field_school_student__create_uid
+#: model:ir.model.fields,field_description:School.field_school_teacher__create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__create_date
+#: model:ir.model.fields,field_description:School.field_school_period__create_date
+#: model:ir.model.fields,field_description:School.field_school_student__create_date
+#: model:ir.model.fields,field_description:School.field_school_teacher__create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__total_hours
+msgid "Credit Hours"
+msgstr "Kredit-Stunden"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__credit_limit
+#: model:ir.model.fields,field_description:School.field_school_teacher__credit_limit
+msgid "Credit Limit"
+msgstr "Kreditlimit"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__currency_id
+msgid "Currency"
+msgstr "Währung"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__date
+#: model:ir.model.fields,field_description:School.field_school_teacher__date
+msgid "Date"
+msgstr "Datum"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_res_company__display_name
+#: model:ir.model.fields,field_description:School.field_school_course__display_name
+#: model:ir.model.fields,field_description:School.field_school_period__display_name
+#: model:ir.model.fields,field_description:School.field_school_student__display_name
+#: model:ir.model.fields,field_description:School.field_school_teacher__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_period__duration
+msgid "Duration of Period"
+msgstr "Dauer der Periode"
+
+#. module: School
+#: model:ir.model.fields,help:School.field_school_student__partner_share
+#: model:ir.model.fields,help:School.field_school_teacher__partner_share
+msgid ""
+"Either customer (not a user), either shared user. Indicated the current "
+"partner is a customer without access or with a limited access created for "
+"sharing data."
+msgstr ""
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__email
+#: model:ir.model.fields,field_description:School.field_school_teacher__email
+msgid "Email"
+msgstr "Email"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__employee
+#: model:ir.model.fields,field_description:School.field_school_teacher__employee
+msgid "Employee"
+msgstr "Mitarbeiter"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__end_date
+msgid "End of Course"
+msgstr "Ende des Kurses"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+msgid "Fee Structure"
+msgstr "Gebührenstruktur"
+
+#. module: School
+#: model:ir.model.fields.selection,name:School.selection__school_course__state__finished
+msgid "Finished"
+msgstr "Fertige"
+
+#. module: School
+#: model:ir.model.fields,help:School.field_school_student__email_formatted
+#: model:ir.model.fields,help:School.field_school_teacher__email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr ""
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__email_formatted
+#: model:ir.model.fields,field_description:School.field_school_teacher__email_formatted
+msgid "Formatted Email"
+msgstr "Formatierte E-Mail"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__partner_latitude
+#: model:ir.model.fields,field_description:School.field_school_teacher__partner_latitude
+msgid "Geo Latitude"
+msgstr "Geo-Breitengrad"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__partner_longitude
+#: model:ir.model.fields,field_description:School.field_school_teacher__partner_longitude
+msgid "Geo Longitude"
+msgstr "Geo-Längengrad"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.period_list_view
+msgid "Held by"
+msgstr "Gehalten von"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_res_company__id
+#: model:ir.model.fields,field_description:School.field_school_course__id
+#: model:ir.model.fields,field_description:School.field_school_period__id
+#: model:ir.model.fields,field_description:School.field_school_student__id
+#: model:ir.model.fields,field_description:School.field_school_teacher__id
+msgid "ID"
+msgstr "ID"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_res_company__school_identity_number
+#: model:ir.model.fields,field_description:School.field_school_student__identity_number
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+msgid "Identification number"
+msgstr "Identifikationsnummer"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__image_1920
+#: model:ir.model.fields,field_description:School.field_school_teacher__image_1920
+msgid "Image"
+msgstr "Bild"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__image_1024
+#: model:ir.model.fields,field_description:School.field_school_teacher__image_1024
+msgid "Image 1024"
+msgstr "Bild 1024"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__image_128
+#: model:ir.model.fields,field_description:School.field_school_teacher__image_128
+msgid "Image 128"
+msgstr "Bild 128"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__image_256
+#: model:ir.model.fields,field_description:School.field_school_teacher__image_256
+msgid "Image 256"
+msgstr "Bild 256"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__image_512
+#: model:ir.model.fields,field_description:School.field_school_teacher__image_512
+msgid "Image 512"
+msgstr "Bild 512"
+
+#. module: School
+#: model:ir.model.fields.selection,name:School.selection__school_course__state__inprogress
+msgid "InProgress"
+msgstr "In Bearbeitung"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__industry_id
+#: model:ir.model.fields,field_description:School.field_school_teacher__industry_id
+msgid "Industry"
+msgstr "Industrie"
+
+#. module: School
+#: model:ir.model.fields,help:School.field_school_student__type
+#: model:ir.model.fields,help:School.field_school_teacher__type
+msgid ""
+"Invoice & Delivery addresses are used in sales orders. Private addresses are"
+" only visible by authorized users."
+msgstr ""
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__is_company
+#: model:ir.model.fields,field_description:School.field_school_teacher__is_company
+msgid "Is a Company"
+msgstr "Ist ein Unternehmen"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__function
+#: model:ir.model.fields,field_description:School.field_school_teacher__function
+msgid "Job Position"
+msgstr "Job Position"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Joining date"
+msgstr "Beitrittsdatum"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__lang
+#: model:ir.model.fields,field_description:School.field_school_teacher__lang
+msgid "Language"
+msgstr "Sprache"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__language
+#: model:ir.model.fields,field_description:School.field_school_teacher__language
+msgid "Languages"
+msgstr "Sprache"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_res_company____last_update
+#: model:ir.model.fields,field_description:School.field_school_course____last_update
+#: model:ir.model.fields,field_description:School.field_school_period____last_update
+#: model:ir.model.fields,field_description:School.field_school_student____last_update
+#: model:ir.model.fields,field_description:School.field_school_teacher____last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert am"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__write_uid
+#: model:ir.model.fields,field_description:School.field_school_period__write_uid
+#: model:ir.model.fields,field_description:School.field_school_student__write_uid
+#: model:ir.model.fields,field_description:School.field_school_teacher__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__write_date
+#: model:ir.model.fields,field_description:School.field_school_period__write_date
+#: model:ir.model.fields,field_description:School.field_school_student__write_date
+#: model:ir.model.fields,field_description:School.field_school_teacher__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__mobile
+#: model:ir.model.fields,field_description:School.field_school_teacher__mobile
+msgid "Mobile"
+msgstr "Mobil"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__name
+#: model:ir.model.fields,field_description:School.field_school_student__name
+#: model:ir.model.fields,field_description:School.field_school_teacher__name
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Name"
+msgstr "Name"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__comment
+#: model:ir.model.fields,field_description:School.field_school_teacher__comment
+msgid "Notes"
+msgstr "Notes"
+
+#. module: School
+#: model:ir.model.fields.selection,name:School.selection__school_course__state__open
+msgid "Open"
+msgstr "Öffnen Sie"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__parent_name
+#: model:ir.model.fields,field_description:School.field_school_teacher__parent_name
+msgid "Parent name"
+msgstr "Name des Elternteils"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__same_vat_partner_id
+#: model:ir.model.fields,field_description:School.field_school_teacher__same_vat_partner_id
+msgid "Partner with same Tax ID"
+msgstr "Partner mit gleicher Steuer-ID"
+
+#. module: School
+#: model:ir.model.fields,help:School.field_school_student__partner_id
+msgid "Partner-related data of the student"
+msgstr "Partnerbezogene Daten des Schülers"
+
+#. module: School
+#: model:ir.actions.act_window,name:School.action_period
+msgid "Period"
+msgstr "Zeitraum"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_period__end_time
+msgid "Period End Time"
+msgstr "Periodenende Uhrzeit"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_period__start_time
+msgid "Period Start Time"
+msgstr "Zeitraum Startzeit"
+
+#. module: School
+#: model:ir.model,name:School.model_school_period
+msgid "Periods"
+msgstr "Zeiträume"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.period_list_view
+msgid "Periods list"
+msgstr "Liste der Perioden"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__phone
+#: model:ir.model.fields,field_description:School.field_school_teacher__phone
+msgid "Phone"
+msgstr "Phone"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__price
+msgid "Price"
+msgstr "Price"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Private Number"
+msgstr "Privatnummer"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Private email"
+msgstr "Private E-Mail"
+
+#. module: School
+#: model:ir.model.fields.selection,name:School.selection__res_company__school_type__private
+msgid "Private_School"
+msgstr "Privat_Schule"
+
+#. module: School
+#: model:ir.model.fields.selection,name:School.selection__res_company__school_type__public
+msgid "Public_School"
+msgstr "Öffentliche_Schule"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__ref
+#: model:ir.model.fields,field_description:School.field_school_teacher__ref
+msgid "Reference"
+msgstr "Referenz"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__parent_id
+#: model:ir.model.fields,field_description:School.field_school_teacher__parent_id
+msgid "Related Company"
+msgstr "Verbundenes Unternehmen"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__partner_id
+msgid "Related Partner"
+msgstr "Zugehöriger Partner"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Residence number"
+msgstr "Wohungs nummer"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__user_id
+#: model:ir.model.fields,field_description:School.field_school_teacher__user_id
+msgid "Salesperson"
+msgstr "Verkäufer"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_teacher__period_ids
+#: model:ir.ui.menu,name:School.school_period
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+msgid "Schedule"
+msgstr "Zeitplan"
+
+#. module: School
+#: model:ir.actions.act_window,name:School.action_school
+#: model:ir.ui.menu,name:School.school_root
+msgid "School"
+msgstr "Schule"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+msgid "School Information"
+msgstr "Informationen zur Schule"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+msgid "School details"
+msgstr "Schule Details"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_list_view
+msgid "School list"
+msgstr "Schule Liste"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__school_id
+#: model:ir.model.fields,field_description:School.field_school_teacher__school_id
+msgid "School-ID"
+msgstr "Schul-ID"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__self
+#: model:ir.model.fields,field_description:School.field_school_teacher__self
+msgid "Self"
+msgstr ""
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__partner_share
+#: model:ir.model.fields,field_description:School.field_school_teacher__partner_share
+msgid "Share Partner"
+msgstr ""
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__student_signature
+#: model:ir.model.fields,field_description:School.field_school_teacher__teacher_signature
+msgid "Signature"
+msgstr "Unterschrift"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__start_date
+msgid "Start of Course"
+msgstr "Beginn des Kurses"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__state
+#: model:ir.model.fields,field_description:School.field_school_student__state_id
+#: model:ir.model.fields,field_description:School.field_school_teacher__state_id
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "State"
+msgstr "Zustand"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__street
+#: model:ir.model.fields,field_description:School.field_school_teacher__street
+msgid "Street"
+msgstr "Straße"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Street 2..."
+msgstr "Straße 2..."
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "Street..."
+msgstr "Straße..."
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__street2
+#: model:ir.model.fields,field_description:School.field_school_teacher__street2
+msgid "Street2"
+msgstr "Straße2"
+
+#. module: School
+#: model:ir.actions.act_window,name:School.action_student
+#: model:ir.model,name:School.model_school_student
+#: model:ir.ui.menu,name:School.school_student
+msgid "Student"
+msgstr "Schüler"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__schedule
+msgid "Student Schedule"
+msgstr "Zeitplan für Studenten"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+msgid "Student details"
+msgstr "Studentendetails"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__student_id
+msgid "Students"
+msgstr "Studenten"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_course_view_form
+msgid "Students Enrolled"
+msgstr "Eingeschriebene Studenten"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__category_id
+#: model:ir.model.fields,field_description:School.field_school_teacher__category_id
+msgid "Tags"
+msgstr "Tags"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__vat
+#: model:ir.model.fields,field_description:School.field_school_teacher__vat
+msgid "Tax ID"
+msgstr "Steuer ID"
+
+#. module: School
+#: model:ir.actions.act_window,name:School.action_teacher
+#: model:ir.model,name:School.model_school_teacher
+#: model:ir.model.fields,field_description:School.field_school_period__teacher_id
+#: model:ir.ui.menu,name:School.school_teacher
+msgid "Teacher"
+msgstr "Lehrer"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_teacher__teacher_id
+msgid "Teacher-ID"
+msgstr "Lehrer-ID"
+
+#. module: School
+#: model:ir.model.fields,help:School.field_school_student__vat
+#: model:ir.model.fields,help:School.field_school_teacher__vat
+msgid ""
+"The Tax Identification Number. Complete it if the contact is subjected to "
+"government taxes. Used in some legal statements."
+msgstr ""
+
+#. module: School
+#: model:ir.model.fields,help:School.field_school_student__user_id
+#: model:ir.model.fields,help:School.field_school_teacher__user_id
+msgid "The internal user in charge of this contact."
+msgstr ""
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__tz
+#: model:ir.model.fields,field_description:School.field_school_teacher__tz
+msgid "Timezone"
+msgstr "Zeitzone"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__tz_offset
+#: model:ir.model.fields,field_description:School.field_school_teacher__tz_offset
+msgid "Timezone offset"
+msgstr "Zeitzonen-Offset"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__title
+#: model:ir.model.fields,field_description:School.field_school_teacher__title
+msgid "Title"
+msgstr "Title"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_course__period_count
+msgid "Total Periods in Course"
+msgstr "Gesamtzeiträume im Kurs"
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_res_company__school_type
+msgid "Type Of School"
+msgstr "Typ der Schule"
+
+#. module: School
+#: model:ir.model.fields,help:School.field_school_student__barcode
+#: model:ir.model.fields,help:School.field_school_teacher__barcode
+msgid "Use a barcode to identify this contact."
+msgstr "Verwenden Sie einen Barcode, um diesen Kontakt zu identifizieren."
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__user_ids
+#: model:ir.model.fields,field_description:School.field_school_teacher__user_ids
+msgid "Users"
+msgstr "Benutzer"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+msgid "Website"
+msgstr ""
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__website
+#: model:ir.model.fields,field_description:School.field_school_teacher__website
+msgid "Website Link"
+msgstr ""
+
+#. module: School
+#: model:ir.model.fields,help:School.field_school_student__tz
+#: model:ir.model.fields,help:School.field_school_teacher__tz
+msgid ""
+"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
+"Anywhere else, time values are computed according to the time offset of your web client."
+msgstr ""
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_form
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_form
+msgid "ZIP"
+msgstr ""
+
+#. module: School
+#: model:ir.model.fields,field_description:School.field_school_student__zip
+#: model:ir.model.fields,field_description:School.field_school_teacher__zip
+msgid "Zip"
+msgstr ""
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_form_view
+msgid "e.g. https://www.bloopark.com"
+msgstr ""
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.period_calendar_view
+msgid "period Calender"
+msgstr "Zeitraum Kalander"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_student_view_list
+msgid "student list"
+msgstr "Studentenliste"
+
+#. module: School
+#: model_terms:ir.ui.view,arch_db:School.school_teacher_view_list
+msgid "teacher list"
+msgstr "Lehrerliste"

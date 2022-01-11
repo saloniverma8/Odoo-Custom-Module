@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="student_1" model="school.student">
+            <field name="name">Alex</field>
+            <field name="identity_number">0001</field>
+            <field name="title">03</field>
+            <field name="school_id">01</field>
+            <field name="mobile">+1 (650) 852-3652</field>
+            <field name="email">alex@school_bp.com</field>
+        </record>
+        <record id="student_2" model="school.student">
+            <field name="name">Louis</field>
+            <field name="identity_number">0002</field>
+            <field name="title">02</field>
+            <field name="school_id">01</field>
+            <field name="mobile">+1 (650) 196-2581</field>
+            <field name="email">louis@school_bp.com</field>
+        </record>
+        <record id="student_3" model="school.student">
+            <field name="name">Maria</field>
+            <field name="identity_number">0003</field>
+            <field name="title">02</field>
+            <field name="school_id">01</field>
+            <field name="mobile">+1 (650) 147-8522</field>
+            <field name="email">maria@school_bp.com</field>
+        </record>
+        <record id="student_4" model="school.student">
+            <field name="name">Jack</field>
+            <field name="identity_number">0004</field>
+            <field name="title">03</field>
+            <field name="school_id">01</field>
+            <field name="mobile">+1 (650) 258-9633</field>
+            <field name="email">jack@school_bp.com</field>
+        </record>
+        <record id="student_5" model="school.student">
+            <field name="name">Fibi</field>
+            <field name="identity_number">0005</field>
+            <field name="title">02</field>
+            <field name="school_id">01</field>
+            <field name="mobile">+1 (650) 369-7411</field>
+            <field name="email">fibi@school_bp.com</field>
+        </record>
+        <record id="student_6" model="school.student">
+            <field name="name">Roy</field>
+            <field name="identity_number">0006</field>
+            <field name="title">03</field>
+            <field name="school_id">01</field>
+            <field name="mobile">+1 (650) 159-7501</field>
+            <field name="email">roy@school_bp.com</field>
+        </record>
+        <record id="teacher_1" model="school.teacher">
+            <field name="name">Rosy</field>
+            <field name="title">02</field>
+            <field name="language" eval="[(6,0,[ref('base.lang_en')])]"/>
+            <field name="school_id" ref="base.main_company"/>
+            <field name="country_id" ref="base.de"/>
+            <field name="email">rosy@school_bp.com</field>
+            <field name="mobile">+1 (650) 357-9510</field>
+        </record>
+        <record id="teacher_2" model="school.teacher">
+            <field name="name">Peter</field>
+            <field name="title">03</field>
+            <field name="language"
+                   eval="[(6,0,[ref('base.lang_el_GR'), ref('base.lang_en')])]"/>
+            <field name="school_id" ref="base.main_company"/>
+            <field name="country_id" ref="base.de"/>
+            <field name="email">peter@school_bp.com</field>
+            <field name="mobile">+1 (650) 123-7133</field>
+        </record>
+        <record id="teacher_3" model="school.teacher">
+            <field name="name">John</field>
+            <field name="title">03</field>
+            <field name="language"
+                   eval="[(6,0,[ref('base.lang_fr_BE'), ref('base.lang_en')])]"/>
+            <field name="school_id" ref="base.main_company"/>
+            <field name="country_id" ref="base.de"/>
+            <field name="email">john@school_bp.com</field>
+            <field name="mobile">+1 (650) 987-2698</field>
+        </record>
+        <record id="teacher_4" model="school.teacher">
+            <field name="name">Marry</field>
+            <field name="title">02</field>
+            <field name="language"
+                   eval="[(6,0,[ref('base.lang_it'), ref('base.lang_en')])]"/>
+            <field name="school_id" ref="base.main_company"/>
+            <field name="country_id" ref="base.de"/>
+            <field name="email">marry@school_bp.com</field>
+            <field name="mobile">+1 (650) 691-3277</field>
+        </record>
+        <record id="teacher_5" model="school.teacher">
+            <field name="name">Tonny</field>
+            <field name="title">03</field>
+            <field name="language"
+                   eval="[(6,0,[ref('base.lang_fa_IR'), ref('base.lang_en')])]"/>
+            <field name="school_id" ref="base.main_company"/>
+            <field name="country_id" ref="base.de"/>
+            <field name="email">tonny@school_bp.com</field>
+            <field name="mobile">+1 (650) 591-3873</field>
+        </record>
+        <record id="course_1" model="school.course">
+            <field name="course_language" ref="base.lang_it"/>
+            <field name="level">2</field>
+            <field name="price">500</field>
+            <field name="start_date">2021-03-01</field>
+            <field name="end_date">2021-04-30</field>
+            <field name="status">open</field>
+            <field name="teacher_id" ref="teacher_4"/>
+        </record>
+    </data>
+</odoo>
